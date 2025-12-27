@@ -29,7 +29,7 @@ RUN chown -cR "${BOT_USER}:${BOT_GROUP}" ${BOT_HOME_DIR} && \
 
 FROM base AS builder-deps
 
-RUN sed -e 's/http\:/https\:/g' /etc/apt/sources.list -i
+#RUN sed -e 's/http\:/https\:/g' /etc/apt/sources.list -i
 
 # Install build dependencies
 RUN apt-get ${APT_OPTS} update && \
